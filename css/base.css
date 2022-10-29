@@ -8,6 +8,7 @@
     text-decoration: none;
     box-sizing: border-box;
     color: inherit;
+    list-style: none;
 }
 
 /*Adicionando padrões gerais */
@@ -29,4 +30,43 @@ header{
     position: fixed;
     z-index: 10;
     
+}
+nav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    
+}
+.padrao{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+  
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+}
+.navegacao{
+    justify-content: space-between;
+}
+ul{
+    font-weight: 800;
+}
+/*Area logo*/
+nav h1{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    
+}
+
+.spanLogo{
+    display: flex;
+    align-items: center;
+    width: auto; 
+}
+.logo{
+   width: auto;
+   height: 6vh;
 }
