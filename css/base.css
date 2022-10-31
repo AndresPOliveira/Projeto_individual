@@ -131,3 +131,78 @@ a{
 .azul .imgCard{
     width: 600px;
 }
+/*Formatação sessão preta*/
+.preto .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.preto .container .textoAux{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.preto .container h2{
+    font-weight: 800;
+    font-size: 35px;
+}
+.preto .container span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.preto .imgCard{
+    width: 600px;
+}
+/*Formatação sessão vermelho*/
+.vermelho .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.vermelho .container .textoAux{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.vermelho .container h2{
+    font-weight: 800;
+    font-size: 35px;
+}
+.vermelho .container span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.vermelho .imgCard{
+    width: 600px;
+}
+/*Formatação sessão verde*/
+.verde .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.verde .container .textoAux{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.verde .container h2{
+    font-weight: 800;
+    font-size: 35px;
+}
+.verde .container span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.verde .imgCard{
+    width: 600px;
+}
