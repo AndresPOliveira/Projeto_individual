@@ -206,3 +206,28 @@ a{
 .verde .imgCard{
     width: 600px;
 }
+/*Formatação da sessa direcionar*/
+.direcionar .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+ .direcionarBotao{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin: auto;
+    width: 100%;
+}
+.direcionar .container h1{
+    font-size: 90px;
+    text-align: center;
+    
+}
+.direcionarBotao:hover{
+    color: orangered;
+    border: solid orangered 5px;
+}
+
