@@ -4,6 +4,9 @@ body{
     font-family: sans-serif;
     background-color: #fffafa;
 }
+html {
+    scroll-behavior: smooth;
+}
 /*Editando a navbar/Header*/
 .header{
     background-color: black;
@@ -41,7 +44,7 @@ a{
     justify-content: space-around;
 }
 .spanLogo .logo {
-    width: 50px;
+    width: 60px;
     height: 75px;
 }
 .spanLogo h1{
@@ -76,4 +79,30 @@ a{
 .inicio .container span {
     font-size: 22px;
     text-align: justify;
+}
+
+/*Formatação sessão branco*/
+.branco .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.branco .container .textoAux{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.branco .container h2{
+    font-weight: 800;
+    font-size: 35px;
+}
+.branco .container span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.branco .imgCard{
+    width: 600px;
 }
