@@ -106,3 +106,28 @@ a{
 .branco .imgCard{
     width: 600px;
 }
+/*Formatação sessão azul*/
+.azul .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.azul .container .textoAux{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.azul .container h2{
+    font-weight: 800;
+    font-size: 35px;
+}
+.azul .container span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.azul .imgCard{
+    width: 600px;
+}
