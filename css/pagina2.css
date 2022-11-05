@@ -10,7 +10,7 @@ body{
     color: white;
     border-bottom: solid 2px orangered ;
 }
-.container{
+.header .container{
     width: 80%;
     margin: auto;
 }
@@ -20,7 +20,6 @@ body{
     
 }
 .header{
-    position: fixed;
     width: 100%;
     z-index: 10;
 }
@@ -34,6 +33,7 @@ body{
 }
 .navbar h2{
     font-size: 3.4ch;
+    font-weight: 400;
 }
 a{
     text-decoration: none;
@@ -55,14 +55,95 @@ a{
 }
 .efeito:hover{
     color: orangered;
-    font-weight: 700;
+    font-weight: 400;
 }
 /*Trabalhando na sessão principal*/
+/*Trabalhando com a parte central*/
 .inicio .container{
-    padding-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
+    width: 90%;
+    margin: auto;
+}
+.inicio .conteudo{
+    width: 100ch;
+    margin: auto;
+    border: #FF701F solid 4px;
+    border-radius: 3%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #111;
+}
+.conteudo .textoPergunta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 70ch;
+    background-color: #111;
+
+    
+}
+.textoPergunta h2{
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    
+}
+.conteudo .iniciar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 60ch;
+    border: #FF701F solid 5px;
+    border-radius: 9px;
+    margin-bottom: 15%;
+    background-color: #111;
+}
+.iniciar h2{
+    color: white;
+    font-size: 75px;
+    text-align:center;
+    font-weight: 400;
+
+}
+
+/*Trabalhando com as imagens*/
+.inicio .imgEsquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75vh;
+    margin-right: 40px;
+}
+.inicio .imgDireita{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 40px;
+    height: 75vh;
+}
+.branco{
+    padding-left: 2ch ;
+    width: 11ch;
+}
+.azul{
+    width: 15ch;
+}
+.preto{
+
+    width: 16.5ch;
+}
+.vermelho{
+    width: 15ch;
+    }
+.verde{
+    width: 15ch;
 }
 
