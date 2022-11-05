@@ -148,13 +148,13 @@ a{
 }
 /*Trabalhando no modal de login*/
 .login {
-    width: 50vw;
-    height: 60vh;
+    width: 30vw;
+    height: 75vh;
     background-color: #FFFAFA;
     position: absolute;
-    top: 50%;
-    left: 50%;
     display: none;
+    top: 12%;
+    left: 35%;
     animation: animate;
     animation-duration: 800ms;
     border:#FF701F solid 5px;
