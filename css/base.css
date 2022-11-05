@@ -220,6 +220,7 @@ a{
     border-radius: 15px;
     margin: auto;
     width: 100%;
+    border: solid 5px black;
 }
 .direcionar .container h1{
     font-size: 90px;
@@ -229,5 +230,8 @@ a{
 .direcionarBotao:hover{
     color: orangered;
     border: solid orangered 5px;
+    padding: 15px ;
 }
+
+
 
