@@ -147,3 +147,43 @@ a{
     width: 15ch;
 }
 /*Trabalhando no modal de login*/
+.login {
+    width: 50vw;
+    height: 60vh;
+    background-color: #FFFAFA;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+    border:#FF701F solid 5px;
+    border-radius: 9px;
+}
+.containerLogin{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+.containerLogin .headerLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerLogin .dadosLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerLogin .headerLogin h1{
+    color: #111;
+}
+.containerLogin .dadosLogin span{
+    color: #111;
+}
+.containerLogin .dadosLogin input{
+    height: 2vw;
+    width: 30vh;
+}
