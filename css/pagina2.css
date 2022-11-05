@@ -66,7 +66,9 @@ body{
     height: 85vh;
     width: 90%;
     margin: auto;
+    
 }
+
 .inicio .conteudo{
     width: 100ch;
     margin: auto;
@@ -113,6 +115,10 @@ body{
     font-weight: 400;
 
 }
+.conteudo a{
+    text-decoration: none;
+    color: #FFFAFA;
+}
 
 /*Trabalhando com as imagens*/
 .inicio .imgEsquerda{
@@ -147,51 +153,87 @@ body{
     width: 15ch;
 }
 /*Trabalhando no modal de login*/
-.login {
+.login{
     width: 30vw;
     height: 75vh;
     background-color: #FFFAFA;
     position: absolute;
-    display: none;
     top: 12%;
     left: 35%;
-    animation: animate;
-    animation-duration: 800ms;
     border:#FF701F solid 5px;
     border-radius: 9px;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 .containerLogin{
-    width: 50vw;
-    height: 50vh;
+    width: 30vw;
+    height: 75vh;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
+  
 }
 .containerLogin .headerLogin{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10vh;
+  
 }
 .containerLogin .dadosLogin{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 15vw;
+ 
 }
-.containerLogin .headerLogin h1{
-    color: #111;
+.containerLogin .loginBotao{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    border: #111 3px solid;
+    background-color: #111;
+    border-radius: 9px;
+    
+}
+.containerLogin .cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+.containerLogin .headerLogin h2{
+    color: #111;
+    font-size: 40px;
+    font-weight: 400;
 
+}
+.containerLogin .cadastro a{
+    text-decoration: none;
+    color: #FF701F;
+    
+}
+.containerLogin a{
+    text-decoration: none;
+    color: #fffafa;
+    
 }
 .containerLogin .dadosLogin span{
     color: #111;
     display: flex;
+    width: 40vh;
+    font-size: 30px;
+
 }
 .containerLogin .dadosLogin input{
-    height: 2vw;
-    width: 30vh;
-    display: flex;
+    height: 3vw;
+    width: 40vh;
+    font-size: 25px;
+
 }
