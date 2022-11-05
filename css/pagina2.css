@@ -35,7 +35,7 @@ body{
     font-size: 3.4ch;
     font-weight: 400;
 }
-a{
+.navbar a{
     text-decoration: none;
     color: white;
 }
@@ -159,12 +159,16 @@ a{
     animation-duration: 800ms;
     border:#FF701F solid 5px;
     border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .containerLogin{
     width: 50vw;
     height: 50vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .containerLogin .headerLogin{
     display: flex;
@@ -179,11 +183,15 @@ a{
 }
 .containerLogin .headerLogin h1{
     color: #111;
+    display: flex;
+
 }
 .containerLogin .dadosLogin span{
     color: #111;
+    display: flex;
 }
 .containerLogin .dadosLogin input{
     height: 2vw;
     width: 30vh;
+    display: flex;
 }
