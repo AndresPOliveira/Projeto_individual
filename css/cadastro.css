@@ -80,64 +80,62 @@ body{
     align-items: center;
     justify-content: space-around;
     background-color: #111;
+    padding-bottom: 1.5%;
 }
-.conteudo .textoPergunta{
+.textoPergunta{
+    color: #fffafa;
+    width: 80ch;
+    margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 20vh;
-    width: 40ch;
-    background-color: #111;
-
-    
 }
-.textoPergunta h2{
-    font-size: 60px;
-    text-align: center;
-    color: white;
-    
+.iniciar{
+    color: #fffafa;
+    border: #111 solid 4px;
+    width: 60ch;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
 }
-.conteudo .iniciar{
+.botaoCadastrar{
+    color: #fffafa;
+    border: #FF701F solid 4px;
+    border-radius: 9px;
+    width: 30ch;
+    height: 10%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
-    width: 40ch;
-    border-radius: 9px;
-    margin-bottom: 15%;
-    background-color: #111;
+}
+.textoPergunta h2{
+    font-size: 50px;
 }
 .iniciar h2{
-    color: white;
-    font-size: 30px;
-    text-align:start;
-    font-weight: 400;
-    width: 30ch;
-
-}
-.iniciar input{
-    height: 40px;
+    font-size: 33px;
     width: 100%;
-    border: #111;
-    border-radius: 7px;
 }
-.iniciar .iptCadastro{
-    height: 50px;
-    width: 55ch;
-    display: flex;
-    align-items: center;
+.botaoCadastrar span{
+    text-align: center;
+    font-size: 33px;
+    
 }
-.iniciar .botaoCadastrar{
-    border: #FF701F solid 4px;
-    width: 20ch;
+.iptCadastro{
+    width: 60ch;
     height: 40px;
+    display: flex;
+    justify-content: center;
 }
-.conteudo a{
-    text-decoration: none;
-    color: #FFFAFA;
+.iptCadastro input {
+    width: 80%;
+    height: 90%;
+    font-size: 25px;
+    
 }
-
 /*Trabalhando com as imagens*/
 .inicio .imgEsquerda{
     display: flex;
