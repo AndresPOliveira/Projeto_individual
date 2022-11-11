@@ -85,16 +85,15 @@ body{
 .textoPergunta{
     color: #fffafa;
     width: 78ch;
-    height: 15vh;
+    height: 12vh;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:#111 solid 3px;
 }
 .iniciar{
     color: #fffafa;
-    border: #111 solid 4px;
+
     width: 60ch;
     margin: auto;
     display: flex;
