@@ -70,7 +70,7 @@ body{
 }
 
 .inicio .conteudo{
-    width: 100ch;
+    width: 80ch;
     margin: auto;
     border: #FF701F solid 4px;
     border-radius: 3%;
@@ -84,11 +84,13 @@ body{
 }
 .textoPergunta{
     color: #fffafa;
-    width: 80ch;
+    width: 78ch;
+    height: 15vh;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border:#111 solid 3px;
 }
 .iniciar{
     color: #fffafa;
@@ -98,7 +100,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 .botaoCadastrar{
     color: #fffafa;
@@ -116,17 +118,23 @@ body{
     font-size: 50px;
 }
 .iniciar h2{
-    font-size: 33px;
-    width: 100%;
+    font-size: 100%;
+    width: 80%;
+    height: 100%;
 }
 .botaoCadastrar span{
     text-align: center;
     font-size: 33px;
     
 }
+.botaoCadastrar a{
+ text-decoration: none;
+  color: #fffafa;
+    
+}
 .iptCadastro{
     width: 60ch;
-    height: 40px;
+    height: 30px;
     display: flex;
     justify-content: center;
 }
