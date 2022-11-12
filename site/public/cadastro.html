@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina 2</title>
+    <title>Pagina de Cadastro</title>
     <!-- <link rel="stylesheet" href="css/pagina2.css"> -->
     <link rel="stylesheet" href="css/cadastro.css">
+    <script src="js/funcoes.js"></script>
 </head>
 <body>
     <div class="header">
@@ -21,6 +22,11 @@
         </div>
     </div>
     <section class="inicio">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
         <div class="container">
         <div class="imgEsquerda">
             <div class="manaBranco">
@@ -62,7 +68,7 @@
                 </div>
             </div>
             <div class="botaoCadastrar">
-                <a href="pagina2.html" onclick="cadastrar()"><span class="efeito">Finalizar</span></a>
+                <a href="#" onclick="cadastrar()"><span class="efeito" >Finalizar</span></a>
             </div>
             
         </div>
@@ -86,13 +92,18 @@
         </div>
     </div>
     </section>
+    <div id="div_aguardar" class="loading-div">
+        <img src="./assets/circle-loading.gif" id="loading-gif">
+    </div>
+
+    <div id="div_erros_login">
     
 </body>
 </html>
 <script>
     function cadastrar() {
         aguardar();
-
+        console.log(`entrou aqui`)
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
