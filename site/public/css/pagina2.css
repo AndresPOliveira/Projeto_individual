@@ -199,6 +199,8 @@ body{
     border: #111 3px solid;
     background-color: #111;
     border-radius: 9px;
+    color: #FFFAFA;
+    cursor: pointer;
     
 }
 .containerLogin .cadastro{

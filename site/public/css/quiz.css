@@ -236,3 +236,22 @@ body{
     font-size: 25px;
 
 }
+/*Editando a area do quiz*/
+.quiz{
+    display: none;
+}
+.quiz .conteudo .textoPergunta h2{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+.quiz .conteudo .respostas{
+    color: #FFFAFA;
+    border: #FF701F solid 2px;
+    width: 80%;
+    
+}
+.respostas:hover{
+    pointer-events: fill;
+    cursor: pointer;
+}
