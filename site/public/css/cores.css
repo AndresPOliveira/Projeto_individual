@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: sans-serif;
-    background-color: #fffafa;
+    background-color: #FDF2E1;
 }
 /*Editando a navbar/Header*/
 .header{
@@ -24,7 +24,8 @@ body{
 }
 .navbar{
     display: flex;
-    width: 600px;
+    width: 400px;
+    height: 100%;
     color: white;
     justify-content: end;
     list-style: none;
@@ -51,12 +52,81 @@ body{
 }
 .efeito{
     font-weight: 700;
+    
 }
+
 .efeito:hover{
     color: orangered;
     font-weight: 400;
 }
-ul{
-    display: none;
-}
 
+/*Trabalhando na area central*/
+.tudo{
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+}
+.azul{
+    width: 20ch;
+}
+.imgDeck{
+    width: 25ch;
+}
+.textoPrincipal{
+    margin-top: 2%;
+    border: solid 3px #FDF2E1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.iconeCor{
+    border: solid 3px #FDF2E1;
+}
+.textoCor{
+    border:solid 3px #FDF2E1;
+    width: 60%;
+}
+.textoCor h2{
+    border: solid 3px #FDF2E1;
+    font-size: 5.5ch;
+    text-align: center;
+}
+.recomenda{
+    border: solid 3px #FDF2E1;
+}
+.recomenda h2{
+    text-align: center;
+}
+.recomendados{
+    border: solid 3px #FDF2E1;
+    display: flex;
+    justify-content: space-around;
+}
+.recomendados a{
+    text-decoration: none;
+    color: #111;
+}
+.caixa{
+    border: solid 3px #FDF2E1;
+}
+.caixaImg{
+    border-top: #111 solid 3px;
+    border-left: #111 solid 3px;
+    border-right: #111 solid 3px;
+    border-bottom: #111 solid 3px;
+    height: 66.5%;
+}
+.caixaTexto{
+    border-top: none;
+    border-bottom: #111 solid 3px;
+    border-left: #111 solid 3px;
+    border-right: #111 solid 3px;
+    background-color: #FFFFFF;
+    height: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
