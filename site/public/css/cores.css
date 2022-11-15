@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fffafa;
+}
+/*Editando a navbar/Header*/
+.header{
+    background-color: black;
+    color: white;
+    border-bottom: solid 2px orangered ;
+}
+.header .container{
+    width: 80%;
+    margin: auto;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header{
+    width: 100%;
+    z-index: 10;
+}
+.navbar{
+    display: flex;
+    width: 600px;
+    color: white;
+    justify-content: end;
+    list-style: none;
+    align-items: center;
+}
+.navbar h2{
+    font-size: 3.4ch;
+    font-weight: 400;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.spanLogo{
+    display: flex;
+    justify-content: space-around;
+}
+.spanLogo .logo {
+    width: 60px;
+    height: 75px;
+}
+.spanLogo h1{
+    text-decoration:  underline orangered ;
+}
+.efeito{
+    font-weight: 700;
+}
+.efeito:hover{
+    color: orangered;
+    font-weight: 400;
+}
+ul{
+    display: none;
+}
+
