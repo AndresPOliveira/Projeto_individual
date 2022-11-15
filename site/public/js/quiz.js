@@ -45,13 +45,19 @@ function chamarQuestao5() {
     let esconderPergunta = document.querySelector('.textoPergunta4')
     esconderPergunta.style.display = 'none';
 }
+function fim() {
+    let mostrar = document.querySelector('.acabou');
+    mostrar.style.display = 'block';
+    let esconder = document.querySelector('.quiz')
+    esconder.style.display = 'none';
+}
 // Apartir daqui resultado do quiz
 var index1 = 0;
 var index2 = 0;
 var index3 = 0;
 var index4 = 0;
 var index5 = 0;
-
+var teste1 = index1 + index2 + index3 + index4 +index5;
 function vermelho() {
     index1 ++;
     console.log(index1,index2,index3,index4,index5)
@@ -74,17 +80,21 @@ function verde() {
 } 
 function resultado() {
     console.log("entrou na função")
-    const paginaResultado = document.querySelector('.resultado')
+    var ResultadoVermelho = document.querySelector('#resultado')
     if (index1 > index2 && index1 > index3 && index1 > index4 && index1 > index5) {
-        paginaResultado.href = 'cores/vermelho.html'
+        ResultadoVermelho.href = 'cores/vermelho.html'
         console.log("entrou no if")
     } else if (index2 > index1 && index2 > index3 && index2 > index4 && index2 > index5) {
-        
+        ResultadoVermelho.href = 'cores/azul.html'
+        console.log("entrou no if azul")
     } else if (index3 > index1 && index3 > index2 && index3 > index4 && index3 > index5){
-        
+        ResultadoVermelho.href = 'cores/preto.html'
+        console.log("entrou no if preto")
     } else if (index4 > index1 && index4 > index3 && index4 > index2 && index4 > index5){
-
+        ResultadoVermelho.href = 'cores/branco.html'
+        console.log("entrou no if branco")
     } else if (index5 > index1 && index5 > index3 && index5 > index4 && index5 > index2){
-
+        ResultadoVermelho.href = 'cores/verde.html'
+        console.log("entrou no if verde")
     }
 }

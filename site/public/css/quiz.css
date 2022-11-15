@@ -203,3 +203,28 @@ body{
 .textoPergunta2, .textoPergunta3, .textoPergunta4, .textoPergunta5{
     display: none;
 } 
+/*Editando area final*/
+.acabou{
+    display: none;
+}
+.acabou .conteudo .resultado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 60ch;
+    border: #FF701F solid 5px;
+    border-radius: 9px;
+    margin-bottom: 15%;
+    background-color: #111;
+}
+.resultado{
+    border: #FF701F solid 5px;
+}
+.resultado h2{
+    color: white;
+    font-size: 75px;
+    text-align:center;
+    font-weight: 400;
+
+}
