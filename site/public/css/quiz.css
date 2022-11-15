@@ -118,6 +118,9 @@ body{
     text-decoration: none;
     color: #FFFAFA;
 }
+.conteudo a:hover{
+    color:#FF701F ;
+}
 
 /*Trabalhando com as imagens*/
 .inicio .imgEsquerda{
@@ -151,107 +154,52 @@ body{
 .verde{
     width: 15ch;
 }
-/*Trabalhando no modal de login*/
-.login{
-    width: 30vw;
-    height: 75vh;
-    background-color: #FFFAFA;
-    position: absolute;
-    top: 12%;
-    left: 35%;
-    border:#FF701F solid 5px;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
-}
-.containerLogin{
-    width: 30vw;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-  
-}
-.containerLogin .headerLogin{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-  
-}
-.containerLogin .dadosLogin{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 15vw;
- 
-}
-.containerLogin .loginBotao{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vh;
-    border: #111 3px solid;
-    background-color: #111;
-    border-radius: 9px;
-    
-}
-.containerLogin .cadastro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    
-}
-.containerLogin .headerLogin h2{
-    color: #111;
-    font-size: 40px;
-    font-weight: 400;
 
-}
-.containerLogin .cadastro a{
-    text-decoration: none;
-    color: #FF701F;
-    
-}
-.containerLogin a{
-    text-decoration: none;
-    color: #fffafa;
-    
-}
-.containerLogin .dadosLogin span{
-    color: #111;
-    display: flex;
-    width: 40vh;
-    font-size: 30px;
-
-}
-.containerLogin .dadosLogin input{
-    height: 3vw;
-    width: 40vh;
-    font-size: 25px;
-
-}
 /*Editando a area do quiz*/
 .quiz{
     display: none;
 }
-.quiz .conteudo .textoPergunta h2{
+.quiz h2{
     font-size: 30px;
     text-align: center;
     color: white;
 }
 .quiz .conteudo .respostas{
     color: #FFFAFA;
-    border: #FF701F solid 2px;
-    width: 80%;
+    width: 100%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 3px;
+    
+}
+.respostas span{
+    font-size: 16px;
+    text-align: justify;
     
 }
 .respostas:hover{
-    pointer-events: fill;
     cursor: pointer;
 }
+.respostas span:hover{
+    color: #FF701F;
+}
+.caixaDeRespostas5{
+    margin: auto;
+    padding: 3%;
+}
+.caixaDeRespostas5 .respostas{
+    padding: 0.3%;
+    
+}
+.caixaDeRespostas2, .caixaDeRespostas3, .caixaDeRespostas4, .caixaDeRespostas5{
+    display: none;
+}
+.caixaDeRespostas1, .caixaDeRespostas2, .caixaDeRespostas3, .caixaDeRespostas4, .caixaDeRespostas5{
+   width: 80%;
+   height: 60%;
+}
+.textoPergunta2, .textoPergunta3, .textoPergunta4, .textoPergunta5{
+    display: none;
+} 
