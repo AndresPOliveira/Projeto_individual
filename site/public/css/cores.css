@@ -71,8 +71,14 @@ body{
 .azul{
     width: 20ch;
 }
+.branco{
+    width: 12ch;
+}
 .imgDeck{
     width: 25ch;
+}
+.imgDeckBranco{
+    width: 26ch;
 }
 .textoPrincipal{
     margin-top: 2%;
