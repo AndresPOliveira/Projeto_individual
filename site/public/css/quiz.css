@@ -24,15 +24,20 @@ body{
 }
 .navbar{
     display: flex;
-    width: 600px;
+    width: 20%;
     color: white;
-    justify-content: end;
+    justify-content: space-around;
     list-style: none;
     align-items: center;
 }
 .navbar h2{
     font-size: 3.4ch;
     font-weight: 400;
+} 
+.navbar p {
+    text-align: center;
+    /* border: #FF701F solid 1px; */
+    margin-top: 70%;
 }
 .navbar a{
     text-decoration: none;
