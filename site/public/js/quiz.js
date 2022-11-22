@@ -78,7 +78,28 @@ function verde() {
     index5 ++;
     console.log(index1,index2,index3,index4,index5)
 } 
+function desempateVermelho() {
+    index1 *=2;
+    console.log(index1,index2,index3,index4,index5)
+}
+function desempateAzul() {
+    index2 *=2;
+    console.log(index1,index2,index3,index4,index5)
+}
+function desempatePreto() {
+    index3 *=2;
+    console.log(index1,index2,index3,index4,index5)
+}
+function desempateBranco() {
+    index4 *=2;
+    console.log(index1,index2,index3,index4,index5)
+}
+function desempateVerde() {
+    index5 *=2;
+    console.log(index1,index2,index3,index4,index5)
+}
 function resultado() {
+    console.log(index1,index2,index3,index4,index5)
     console.log("entrou na função")
     var ResultadoVermelho = document.querySelector('#resultado')
     if (index1 > index2 && index1 > index3 && index1 > index4 && index1 > index5) {
