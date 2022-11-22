@@ -104,18 +104,13 @@ function resultado() {
     var ResultadoVermelho = document.querySelector('#resultado')
     if (index1 > index2 && index1 > index3 && index1 > index4 && index1 > index5) {
         ResultadoVermelho.href = 'cores/vermelho.html'
-        console.log("entrou no if")
     } else if (index2 > index1 && index2 > index3 && index2 > index4 && index2 > index5) {
         ResultadoVermelho.href = 'cores/azul.html'
-        console.log("entrou no if azul")
     } else if (index3 > index1 && index3 > index2 && index3 > index4 && index3 > index5){
         ResultadoVermelho.href = 'cores/preto.html'
-        console.log("entrou no if preto")
     } else if (index4 > index1 && index4 > index3 && index4 > index2 && index4 > index5){
         ResultadoVermelho.href = 'cores/branco.html'
-        console.log("entrou no if branco")
     } else if (index5 > index1 && index5 > index3 && index5 > index4 && index5 > index2){
         ResultadoVermelho.href = 'cores/verde.html'
-        console.log("entrou no if verde")
     }
 }
