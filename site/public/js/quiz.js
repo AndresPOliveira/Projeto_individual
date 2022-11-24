@@ -79,23 +79,23 @@ function verde() {
     console.log(index1,index2,index3,index4,index5)
 } 
 function desempateVermelho() {
-    index1 *=2;
+    index1 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempateAzul() {
-    index2 *=2;
+    index2 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempatePreto() {
-    index3 *=2;
+    index3 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempateBranco() {
-    index4 *=2;
+    index4 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempateVerde() {
-    index5 *=2;
+    index5 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function resultado() {
