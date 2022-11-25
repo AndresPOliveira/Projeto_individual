@@ -1,8 +1,28 @@
-function chamarQuiz() {
+function chamarQuiz() { 
+    fkCorUsuario = sessionStorage.FKCOR_USUARIO;
+    if (fkCorUsuario == 1) {
+        window.location = "cores/vermelho.html";
+        console.log(`vermelho`)
+    } else if(fkCorUsuario == 2){
+        window.location = "cores/verde.html";
+        console.log(`verde`)
+    } else if(fkCorUsuario == 3){
+        window.location = "cores/branco.html";
+        console.log(`branco`)
+    } else if(fkCorUsuario == 4){
+        window.location = "cores/azul.html";
+        console.log(`azul`)
+    } else if(fkCorUsuario == 5){
+        window.location = "cores/preto.html";
+        console.log(`preto`)
+    } else{
+    console.log(fkCorUsuario)
     let mostrarQuiz = document.querySelector('.quiz');
     mostrarQuiz.style.display = 'block';
     let esconderInicio = document.querySelector('.inicio')
     esconderInicio.style.display = 'none';
+    }
+    
 } 
 function chamarQuestao2() {
     let mostrar = document.querySelector('.caixaDeRespostas2');
@@ -109,19 +129,19 @@ function resultado() {
         atualizarFk()
     } else if (index2 > index1 && index2 > index3 && index2 > index4 && index2 > index5) {
         ResultadoVermelho.href = 'cores/azul.html';
-        fkCorVar = 2;
+        fkCorVar = 4;
         atualizarFk()
     } else if (index3 > index1 && index3 > index2 && index3 > index4 && index3 > index5){
         ResultadoVermelho.href = 'cores/preto.html'
-        fkCorVar = 3;
+        fkCorVar = 5;
         atualizarFk()
     } else if (index4 > index1 && index4 > index3 && index4 > index2 && index4 > index5){
         ResultadoVermelho.href = 'cores/branco.html'
-        fkCorVar = 4;
+        fkCorVar = 3;
         atualizarFk()
     } else if (index5 > index1 && index5 > index3 && index5 > index4 && index5 > index2){
         ResultadoVermelho.href = 'cores/verde.html'
-        fkCorVar = 5;
+        fkCorVar = 2;
         atualizarFk()
     }
 }

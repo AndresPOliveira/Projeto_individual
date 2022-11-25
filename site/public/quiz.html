@@ -211,6 +211,8 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     var idUsuario = sessionStorage.ID_USUARIO;
+    var fkCorUsuario = sessionStorage.FKCOR_USUARIO;
+    alert(fkCorUsuario)
     function atualizarFk() {
     fetch("/usuarios/atualizarFk", {
         method: "PUT",
