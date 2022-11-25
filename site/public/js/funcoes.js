@@ -12,8 +12,6 @@ function validarSessao() {
         b_usuario.innerHTML = nome;
 
         // finalizarAguardar();
-    } else {
-        window.location = "../login.html";
     }
 }
 
