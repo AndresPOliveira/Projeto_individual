@@ -100,17 +100,33 @@ function desempateVerde() {
 }
 function resultado() {
     console.log(index1,index2,index3,index4,index5)
-    console.log("entrou na função")
+    var resultadoVar = 0;
     var ResultadoVermelho = document.querySelector('#resultado')
     if (index1 > index2 && index1 > index3 && index1 > index4 && index1 > index5) {
-        ResultadoVermelho.href = 'cores/vermelho.html'
+        ResultadoVermelho.href = 'cores/vermelho.html';
+        resultadoVar = 1;
     } else if (index2 > index1 && index2 > index3 && index2 > index4 && index2 > index5) {
-        ResultadoVermelho.href = 'cores/azul.html'
+        ResultadoVermelho.href = 'cores/azul.html';
+        resultadoVar = 2;
     } else if (index3 > index1 && index3 > index2 && index3 > index4 && index3 > index5){
-        ResultadoVermelho.href = 'cores/preto.html'
+        ResultadoVermelho.href = 'cores/preto.html';
+        resultadoVar = 3;
     } else if (index4 > index1 && index4 > index3 && index4 > index2 && index4 > index5){
-        ResultadoVermelho.href = 'cores/branco.html'
+        ResultadoVermelho.href = 'cores/branco.html';
+        resultadoVar = 4;
     } else if (index5 > index1 && index5 > index3 && index5 > index4 && index5 > index2){
-        ResultadoVermelho.href = 'cores/verde.html'
+        ResultadoVermelho.href = 'cores/verde.html';
+        resultadoVar = 5;
     }
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            resultadoServer: resultadoVar,
+        })
+    })
 }
