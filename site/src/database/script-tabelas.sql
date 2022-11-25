@@ -1,9 +1,8 @@
 CREATE DATABASE projetoIndividual;
 USE projetoIndividual;
 
-
 CREATE TABLE IF NOT EXISTS cor (
-  idCor INT NOT NULL,
+  idCor INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(45) NOT NULL,
   PRIMARY KEY (idCor)
   );
@@ -27,3 +26,9 @@ CREATE TABLE IF NOT EXISTS usuario (
   FOREIGN KEY (fkCor) REFERENCES cor (idCor),
   FOREIGN KEY (fkCartaFavorita) REFERENCES cartaFavorita (idcartaFavorita)
 );
+INSERT INTO cor (nome) VALUES
+("Vermelho"),
+("Verde"),
+("Branco"),
+("Azul"),
+("Preto");
