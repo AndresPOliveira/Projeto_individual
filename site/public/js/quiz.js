@@ -98,19 +98,30 @@ function desempateVerde() {
     index5 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
+var fkCorVar = 0;
 function resultado() {
     console.log(index1,index2,index3,index4,index5)
     console.log("entrou na função")
     var ResultadoVermelho = document.querySelector('#resultado')
     if (index1 > index2 && index1 > index3 && index1 > index4 && index1 > index5) {
-        ResultadoVermelho.href = 'cores/vermelho.html'
+        ResultadoVermelho.href = 'cores/vermelho.html';
+        fkCorVar = 1;
+        atualizarFk()
     } else if (index2 > index1 && index2 > index3 && index2 > index4 && index2 > index5) {
-        ResultadoVermelho.href = 'cores/azul.html'
+        ResultadoVermelho.href = 'cores/azul.html';
+        fkCorVar = 2;
+        atualizarFk()
     } else if (index3 > index1 && index3 > index2 && index3 > index4 && index3 > index5){
         ResultadoVermelho.href = 'cores/preto.html'
+        fkCorVar = 3;
+        atualizarFk()
     } else if (index4 > index1 && index4 > index3 && index4 > index2 && index4 > index5){
         ResultadoVermelho.href = 'cores/branco.html'
+        fkCorVar = 4;
+        atualizarFk()
     } else if (index5 > index1 && index5 > index3 && index5 > index4 && index5 > index2){
         ResultadoVermelho.href = 'cores/verde.html'
+        fkCorVar = 5;
+        atualizarFk()
     }
 }

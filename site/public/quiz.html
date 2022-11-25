@@ -210,4 +210,20 @@
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var idUsuario = sessionStorage.ID_USUARIO;
+    function atualizarFk() {
+    fetch("/usuarios/atualizarFk", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            corServer: fkCorVar,
+            idServer: idUsuario
+            
+        })
+    })
+}
 </script>
