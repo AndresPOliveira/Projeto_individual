@@ -104,11 +104,11 @@
                 <h2>Você é um mago e está em frente a um inimigo, como você lida com ele?</h2>
             </div>
             <div class="caixaDeRespostas1">
-                <div class="respostas" onclick="chamarQuestao2();vermelho()"><span>1. Impulsivo. Gosta de resolver as coisas rapido e do seu jeito.</span></div>
-                <div class="respostas" onclick="chamarQuestao2();azul()"><span>2. Estratégico. Gosta de analisar e planejar antes de tudo.</span></div>
-                <div class="respostas" onclick="chamarQuestao2();preto()"><span>3. Determinado. Gosta de realizar suas metas a todo custo.</span></div>
-                <div class="respostas" onclick="chamarQuestao2();branco()"><span>4. Companheiro. Gosta de trabalhar em equipe para conquistar o objetivo.</span></div>
-                <div class="respostas" onclick="chamarQuestao2();verde()"><span>5. Esforçado. Gosta de realizar metas com seu trabalho duro.</span></div>
+                <div class="respostas" onclick="chamarQuestao2();Vermelho()"><span>1. Impulsivo. Gosta de resolver as coisas rapido e do seu jeito.</span></div>
+                <div class="respostas" onclick="chamarQuestao2();Azul()"><span>2. Estratégico. Gosta de analisar e planejar antes de tudo.</span></div>
+                <div class="respostas" onclick="chamarQuestao2();Preto()"><span>3. Determinado. Gosta de realizar suas metas a todo custo.</span></div>
+                <div class="respostas" onclick="chamarQuestao2();Branco()"><span>4. Companheiro. Gosta de trabalhar em equipe para conquistar o objetivo.</span></div>
+                <div class="respostas" onclick="chamarQuestao2();Verde()"><span>5. Esforçado. Gosta de realizar metas com seu trabalho duro.</span></div>
             </div>
             <div class="caixaDeRespostas2">
                 <div class="respostas" onclick="chamarQuestao3();vermelho()"><span> 1. Espada</span></div>
@@ -210,4 +210,22 @@
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var fkCorUsuario = sessionStorage.FKCOR_USUARIO;
+    alert(fkCorUsuario)
+    function atualizarFk() {
+    fetch("/usuarios/atualizarFk", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            corServer: fkCorVar,
+            idServer: idUsuario
+            
+        })
+    })
+}
 </script>

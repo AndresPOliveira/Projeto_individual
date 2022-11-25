@@ -210,27 +210,63 @@ a{
 .direcionar .container{
     padding-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
  .direcionarBotao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
     border-radius: 15px;
+    padding-top: 20px;
     margin: auto;
-    width: 100%;
+    width: 500px;
+    height: 200px;
     border: solid 5px black;
 }
 .direcionar .container h1{
-    font-size: 90px;
+    font-size: 50px;
     text-align: center;
+    height: 80%;
+    width: 80%;
+    margin: auto;
     
 }
 .direcionarBotao:hover{
     color: orangered;
     border: solid orangered 5px;
     padding: 15px ;
+}
+/*Trabalhando com o footer*/
+.footer {
+    background-color: black;
+    border-top: solid 2px orangered;
+    color: white;
+}
+.footer .container{
+    width: 80%;
+    margin: auto;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    
+}
+.navbar{
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+    align-items: center;
 }
 
 

@@ -30,9 +30,14 @@ function cadastrar(nome, email, senha) {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
-
+function atualizarFk(cor,idUsuario) {
+    var instrucao = `
+    UPDATE usuario SET fkcor = ${cor} WHERE idUsuario = ${idUsuario}`;
+    return database.executar(instrucao);
+}
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    atualizarFk,
 };

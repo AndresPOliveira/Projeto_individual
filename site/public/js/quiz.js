@@ -1,8 +1,28 @@
-function chamarQuiz() {
+function chamarQuiz() { 
+    fkCorUsuario = sessionStorage.FKCOR_USUARIO;
+    if (fkCorUsuario == 1) {
+        window.location = "cores/vermelho.html";
+        console.log(`vermelho`)
+    } else if(fkCorUsuario == 2){
+        window.location = "cores/verde.html";
+        console.log(`verde`)
+    } else if(fkCorUsuario == 3){
+        window.location = "cores/branco.html";
+        console.log(`branco`)
+    } else if(fkCorUsuario == 4){
+        window.location = "cores/azul.html";
+        console.log(`azul`)
+    } else if(fkCorUsuario == 5){
+        window.location = "cores/preto.html";
+        console.log(`preto`)
+    } else{
+    console.log(fkCorUsuario)
     let mostrarQuiz = document.querySelector('.quiz');
     mostrarQuiz.style.display = 'block';
     let esconderInicio = document.querySelector('.inicio')
     esconderInicio.style.display = 'none';
+    }
+    
 } 
 function chamarQuestao2() {
     let mostrar = document.querySelector('.caixaDeRespostas2');
@@ -79,44 +99,50 @@ function verde() {
     console.log(index1,index2,index3,index4,index5)
 } 
 function desempateVermelho() {
-    index1 *=2;
+    index1 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempateAzul() {
-    index2 *=2;
+    index2 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempatePreto() {
-    index3 *=2;
+    index3 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempateBranco() {
-    index4 *=2;
+    index4 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
 function desempateVerde() {
-    index5 *=2;
+    index5 += 3;
     console.log(index1,index2,index3,index4,index5)
 }
+var fkCorVar = 0;
 function resultado() {
     console.log(index1,index2,index3,index4,index5)
     var resultadoVar = 0;
     var ResultadoVermelho = document.querySelector('#resultado')
     if (index1 > index2 && index1 > index3 && index1 > index4 && index1 > index5) {
         ResultadoVermelho.href = 'cores/vermelho.html';
-        resultadoVar = 1;
+        fkCorVar = 1;
+        atualizarFk()
     } else if (index2 > index1 && index2 > index3 && index2 > index4 && index2 > index5) {
         ResultadoVermelho.href = 'cores/azul.html';
-        resultadoVar = 2;
+        fkCorVar = 4;
+        atualizarFk()
     } else if (index3 > index1 && index3 > index2 && index3 > index4 && index3 > index5){
-        ResultadoVermelho.href = 'cores/preto.html';
-        resultadoVar = 3;
+        ResultadoVermelho.href = 'cores/preto.html'
+        fkCorVar = 5;
+        atualizarFk()
     } else if (index4 > index1 && index4 > index3 && index4 > index2 && index4 > index5){
-        ResultadoVermelho.href = 'cores/branco.html';
-        resultadoVar = 4;
+        ResultadoVermelho.href = 'cores/branco.html'
+        fkCorVar = 3;
+        atualizarFk()
     } else if (index5 > index1 && index5 > index3 && index5 > index4 && index5 > index2){
-        ResultadoVermelho.href = 'cores/verde.html';
-        resultadoVar = 5;
+        ResultadoVermelho.href = 'cores/verde.html'
+        fkCorVar = 2;
+        atualizarFk()
     }
     fetch("/usuarios/cadastrar", {
         method: "POST",
