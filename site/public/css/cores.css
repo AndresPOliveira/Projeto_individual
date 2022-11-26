@@ -8,10 +8,12 @@ body{
     background-color: black;
     color: white;
     border-bottom: solid 2px orangered ;
+    
 }
 .header .container{
     width: 80%;
     margin: auto;
+
 }
 .header .container{
     display: flex;
@@ -19,6 +21,7 @@ body{
     
 }
 .header{
+    
     width: 100%;
     z-index: 10;
 }
@@ -68,7 +71,7 @@ body{
 .tudo{
     justify-content: space-between;
     align-items: center;
-    height: 80vh;
+    height: 90vh;
     width: 90%;
     margin: auto;
 }
@@ -79,7 +82,7 @@ body{
     width: 12ch;
 }
 .imgDeck{
-    width: 25ch;
+    width: 27ch;
 }
 .imgDeckBranco{
     width: 26ch;
@@ -139,4 +142,104 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/*Alterando a area das Kpi's*/
+.kpi{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 90vh;
+}
+.kpi .titulo{
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+
+    
+}
+.areaCaixas{
+    display: flex;
+    justify-content: space-around;
+    height: 40%;
+    width: 90%;
+}
+.caixaKpi{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    text-align: center;
+    height: 90%;
+    width: 26%;
+    margin: auto;
+    padding: 0.5%;
+    
+}
+.cartaFavorita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 30%;
+    height: 22%;
+    margin-bottom: 6%;
+    color: black;
+}
+.inputFavorita input{
+    border: #111 solid 1px;
+    border-radius: 5px;
+    height: 30px;
+    width: 250px;
+}
+.inputFavorita button{
+    border: #111 solid 1px;
+    border-radius: 5px;
+    height: 34px;
+    width:70px;
+}
+.inputFavorita button:hover{
+    border: #111 solid 1px;
+    border-radius: 5px;
+    height: 34px;
+    width:70px;
+    cursor: pointer;
+}
+/*Editando o footer*/
+.footer {
+    background-color: black;
+    border-top: solid 2px orangered;
+    color: white;
+}
+.footer .container{
+    width: 80%;
+    margin: auto;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    
+}
+.footer .navbar{
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+    align-items: center;
 }

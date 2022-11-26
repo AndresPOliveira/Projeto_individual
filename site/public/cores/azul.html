@@ -10,14 +10,14 @@
     <script src="../js/funcoes.js"></script>
 </head>
 <body onload="validarSessao()">
-    <div class="header">
+    <div class="header" id="home">
         <div class="container">
             <span class="spanLogo">
                 <img class="logo" src="../css/assets/iconeMtg.png.crdownload" alt="">
                 <h1>Filosofia das cores</h1>
             </span>
             <span class="navbar">
-                <a href=""><h2 class="efeito" id="b_usuario">Nome</h2></a>
+                <a href="#kpi"><h2 class="efeito" id="b_usuario">Nome</h2></a>
                 <a href="../index.html"><p class="efeito">Sair</p></a>
             </span>
         </div>
@@ -67,5 +67,50 @@
         </div>
     </div>
 </section>
+<section class="tudo kpi" id="kpi">
+    <div class="titulo">
+        <h2>Como estão nossos usuários em relação a cor Azul ?</h2>
+    </div>
+    <div class="areaCaixas">
+        <div class="caixaKpi" style="background-color: #8ee0fa;border: #8ee0fa solid 3px;">
+            <div class="nomeKpi">
+                <h2>Quantidade de pessoas no azul</h2>
+            </div>
+            <div class="qtdKpi">
+                <h2>0</h2>
+            </div>
+        </div>
+        <div class="caixaKpi" style="background-color: #8ee0fa;border: #8ee0fa solid 3px;">
+            <div class="nomeKpi">
+                <h2>Cor com maior quantidade de pessoas</h2>
+            </div>
+            <div class="qtdKpi">
+                <h2>Vermelho</h2>
+            </div>
+        </div>
+    </div>
+    <div class="cartaFavorita" style="border: solid #8ee0fa 2px;background-color: #8ee0fa;">
+        <div class="tituloFavorita">
+            <h2>Nos conte sua carta favorita:</h2>
+        </div>
+        <div class="inputFavorita">
+            <input type="text">
+            <button onclick="">Regsitrar</button>
+        </div>
+    </div>
+</section>
+<div class="footer">
+    <div class="container">
+        <ul class="navbar">
+            <a href="https://www.sptech.school" target="_blank" rel="noopener noreferrer"><li>SPTech</li></a>
+            <li> | </li>
+            <li>Projeto Individual</li>
+            <li> | </li>
+            <li>1ADSB - 02/2022</li>
+            <li> | </li>
+            <a href="#home"><li>Home</li></a>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
