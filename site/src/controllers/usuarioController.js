@@ -93,11 +93,76 @@ function cadastrar(req, res) {
             );
     }
 }
+// atualizando fkcor do usuario
 function atualizarFk(req, res) {
     var cor = req.body.corServer;
     var idUsuario = req.body.idServer
 
         usuarioModel.atualizarFk(cor,idUsuario)
+            .then(
+                function (resultado) {
+                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+                    res.json(resultado[0]);
+                  
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+
+}
+// Inserindo a carta favorita na tabela carta favorita
+function salvarCarta(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nome = req.body.nomeCartaServer;
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.salvarCarta(nome)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+// Buscando todas as informações da tabela carta
+function trazerInfoCarta(req, res) {
+        usuarioModel.trazerInfoCarta()
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+// Atualizar a fkUsuario na tabela Carta 
+function atualizarFkUsuario(req, res) {
+    var idCarta = req.body.idCartaServer;
+    var idUsuario = req.body.idUsuarioServer
+
+        usuarioModel.atualizarFkUsuario(idCarta,idUsuario)
             .then(
                 function (resultado) {
                     console.log(`\nResultados encontrados: ${resultado.length}`);
@@ -121,4 +186,7 @@ module.exports = {
     listar,
     testar,
     atualizarFk,
+    salvarCarta,
+    trazerInfoCarta,
+    atualizarFkUsuario,
 }

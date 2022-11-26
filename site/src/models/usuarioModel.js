@@ -35,9 +35,34 @@ function atualizarFk(cor,idUsuario) {
     UPDATE usuario SET fkcor = ${cor} WHERE idUsuario = ${idUsuario}`;
     return database.executar(instrucao);
 }
+// Inserindo nome da carta no banco 
+function salvarCarta(nome, email, senha) {
+    var instrucao = `
+        INSERT INTO cartaFavorita (nome) VALUES ('${nome}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+// Trazendo as informações das cartas 
+function trazerInfoCarta(nome, email, senha) {
+    var instrucao = `
+        SELECT*FROM cartaFavorita;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+// Atualizar a fkUsuario na tabela Carta 
+function atualizarFkUsuario(idCarta,idUsuario) {
+    var instrucao = `
+    UPDATE cartaFavorita SET fkUsuario = ${idUsuario} WHERE idCartaFavorita = ${idCarta}`;
+    return database.executar(instrucao);
+}
 module.exports = {
     entrar,
     cadastrar,
     listar,
     atualizarFk,
+    salvarCarta,
+    trazerInfoCarta,
+    atualizarFkUsuario,
 };

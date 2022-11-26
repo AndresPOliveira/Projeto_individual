@@ -24,5 +24,16 @@ router.post("/autenticar", function (req, res) {
 router.put("/atualizarFk", function (req, res) {
     usuarioController.atualizarFk(req, res);
 });
-
+// Inserindo a carata favorita no banco
+router.post("/salvarCarta", function (req, res) {
+    usuarioController.salvarCarta(req, res);
+})
+// Buscando as informações das cartas 
+router.post("/trazerInfoCarta", function (req, res) {
+    usuarioController.trazerInfoCarta(req, res);
+})
+// Atualizando FKUsuario na tabela cartaFavorita atualizarFkUsuario
+router.post("/atualizarFkUsuario", function (req, res) {
+    usuarioController.atualizarFkUsuario(req, res);
+})
 module.exports = router;
