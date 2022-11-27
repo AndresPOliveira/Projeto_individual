@@ -94,8 +94,8 @@
                 <h2>Nos conte sua carta favorita:</h2>
             </div>
             <div class="inputFavorita">
-                <input type="text">
-                <button onclick="">Regsitrar</button>
+                <input id="favCarta">
+                <button onclick="salvarCarta()">Regsitrar</button>
             </div>
         </div>
     </section>
@@ -114,3 +114,65 @@
     </div>
     </body>
 </html>
+<script>
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var teste1 = 0;
+    function salvarCarta() {
+        var nomeCartaVar = favCarta.value;
+        fetch("/usuarios/salvarCarta", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeCartaServer: nomeCartaVar,
+            })
+        })
+        setTimeout(()=>{trazerInfoCarta()},5000)
+    }
+    function trazerInfoCarta() {
+        fetch("/usuarios/trazerInfoCarta", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                resposta.json().then(data=>{
+                    console.log(data)
+                    console.log(data[data.length-1].idCartaFavorita)
+                    teste1 = data[data.length-1].idCartaFavorita;
+                  setTimeout(()=>{atualizarFkUsuario(teste1)}, 1000)  
+                })
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+        
+    }
+function atualizarFkUsuario(teste1) {
+    console.log(teste1)
+    var idUsuarioVar = idUsuario;
+    fetch("/usuarios/atualizarFkUsuario", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idCartaServer: teste1,
+                idUsuarioServer: idUsuarioVar,
+
+            })
+        })
+}
+</script>

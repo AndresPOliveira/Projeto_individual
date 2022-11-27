@@ -7,28 +7,25 @@ CREATE TABLE IF NOT EXISTS cor (
   PRIMARY KEY (idCor)
   );
 
-CREATE TABLE IF NOT EXISTS cartaFavorita (
-  idCartaFavorita INT NOT NULL AUTO_INCREMENT,
-  nome VARCHAR(45)  NOT NULL,
-  PRIMARY KEY (idCartaFavorita)
-  );
-
-
-
 CREATE TABLE IF NOT EXISTS usuario (
   idUsuario INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(45) NOT NULL,
   email VARCHAR(45) NOT NULL,
   senha VARCHAR(45) NOT NULL,
   fkCor INT,
-  fkCartaFavorita INT,
   PRIMARY KEY (idUsuario),
-  FOREIGN KEY (fkCor) REFERENCES cor (idCor),
-  FOREIGN KEY (fkCartaFavorita) REFERENCES cartaFavorita (idcartaFavorita)
+  FOREIGN KEY (fkCor) REFERENCES cor (idCor)
 );
+CREATE TABLE IF NOT EXISTS cartaFavorita (
+  idCartaFavorita INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(45)  NOT NULL,
+  fkUsuario INT,
+  PRIMARY KEY (idCartaFavorita),
+  FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario)
+  );
 INSERT INTO cor (nome) VALUES
-("Vermelho"),
-("Verde"),
-("Branco"),
-("Azul"),
-("Preto");
+  ("Vermelho"),
+  ("Verde"),
+  ("Branco"),
+  ("Azul"),
+  ("Preto");
