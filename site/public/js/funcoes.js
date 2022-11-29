@@ -107,11 +107,80 @@ function qtdVerde() {
     
 }
 function qtdBranco() {
-    qtdBrancoDiv.innerHTML = 1;
+    fetch("/usuarios/qtdBranco", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            resposta.json().then(data1=>{
+                console.log(data1)
+                console.log(data1[data1.length-1].qtd)
+                qtdBrancoDiv.innerHTML = data1[data1.length-1].qtd;
+            })
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 }
 function qtdAzul() {
-    qtdAzulDiv.innerHTML = 1;
+    fetch("/usuarios/qtdAzul", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            resposta.json().then(data1=>{
+                console.log(data1)
+                console.log(data1[data1.length-1].qtd)
+                qtdAzulDiv.innerHTML = data1[data1.length-1].qtd;
+            })
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 }
 function qtdPreto() {
-    qtdPretoDiv.innerHTML = 1;
+    fetch("/usuarios/qtdPreto", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            resposta.json().then(data1=>{
+                console.log(data1)
+                console.log(data1[data1.length-1].qtd)
+                qtdPretoDiv.innerHTML = data1[data1.length-1].qtd;
+            })
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 }

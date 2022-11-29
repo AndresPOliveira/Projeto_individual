@@ -235,6 +235,60 @@ function qtdVerde(req, res) {
         );
 
 }
+function qtdBranco(req, res) {
+    usuarioModel.qtdBranco()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
+function qtdAzul(req, res) {
+    usuarioModel.qtdAzul()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
+function qtdPreto(req, res) {
+    usuarioModel.qtdPreto()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
 module.exports = {
     entrar,
     cadastrar,
@@ -247,4 +301,7 @@ module.exports = {
     atualizarFkUsuario,
     qtdVermelho,
     qtdVerde,
+    qtdBranco,
+    qtdAzul,
+    qtdPreto,
 }

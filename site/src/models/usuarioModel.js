@@ -79,6 +79,27 @@ function qtdVerde() {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+function qtdBranco() {
+    var instrucao = `
+    select count(*)'qtd' from usuario where fkcor = 3;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function qtdAzul() {
+    var instrucao = `
+    select count(*)'qtd' from usuario where fkcor = 4;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function qtdPreto() {
+    var instrucao = `
+    select count(*)'qtd' from usuario where fkcor = 5;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 module.exports = {
     entrar,
     cadastrar,
@@ -89,5 +110,8 @@ module.exports = {
     trazerInfoCarta2,
     atualizarFkUsuario,
     qtdVermelho,
-    qtdVerde
+    qtdVerde,
+    qtdBranco,
+    qtdAzul,
+    qtdPreto,
 };

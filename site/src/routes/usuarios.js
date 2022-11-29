@@ -46,4 +46,13 @@ router.post("/qtdVermelho", function (req, res) {
 router.post("/qtdVerde", function (req, res) {
     usuarioController.qtdVerde(req, res);
 })
+router.post("/qtdBranco", function (req, res) {
+    usuarioController.qtdBranco(req, res);
+})
+router.post("/qtdAzul", function (req, res) {
+    usuarioController.qtdAzul(req, res);
+})
+router.post("/qtdPreto", function (req, res) {
+    usuarioController.qtdPreto(req, res);
+})
 module.exports = router;
