@@ -14,7 +14,10 @@ function validarSessao() {
     }
     trazerInfoCarta2();
     qtdVermelho();
-    qtdVerde()
+    qtdVerde();
+    qtdBranco();
+    qtdAzul();
+    qtdPreto();
 }
 
 function limparSessao() {
