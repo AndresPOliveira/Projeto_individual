@@ -99,6 +99,12 @@
                 <button onclick="salvarCarta();">Regsitrar</button>
             </div>
         </div>
+        <div class="cartaFavorita cartaRegistrada" style="border: solid #7cd3ad 2px;background-color: #7cd3ad;">
+            <div class="tituloFavorita">
+                <h2>Sua carta favorita:</h2>
+                <h2 id="cartafavRegsitrada"></h2>
+            </div>
+        </div>
     </section>
     <div class="footer">
         <div class="container">
@@ -176,5 +182,54 @@ function atualizarFkUsuario(teste1) {
 
             })
         })
+}
+function trazerInfoCarta2() {
+        fetch("/usuarios/trazerInfoCarta2", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                resposta.json().then(data=>{
+                    console.log(data)
+                    console.log(data[data.length-1].idCartaFavorita)
+                    console.log(data[data.length-1].nome)
+                    console.log(data[data.length-1].fkUsuario)
+                    teste1 = data[data.length-1].idCartaFavorita;
+                    fkUsuario = idUsuario; 
+                    for (let index = 0; index < data.length; index++) {
+                    if (data[index].fkUsuario == idUsuario) {
+                        console.log(data[index].nome)
+                        console.log(idUsuario)
+                        console.log(fkUsuario)
+                        console.log(data[index].fkUsuario)
+                        cartafavRegsitrada.innerHTML = data[index].nome;
+                        trocar()
+                        break
+                        
+                    }        
+                  }
+                })
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+        
+    }
+    function trocar() {
+    console.log(`chamou aqui`)
+    let mostrar = document.querySelector('.semRegsitro');
+    mostrar.style.display = 'none';
+    let esconder = document.querySelector('.cartaRegistrada')
+    esconder.style.display = 'flex';
 }
 </script>
