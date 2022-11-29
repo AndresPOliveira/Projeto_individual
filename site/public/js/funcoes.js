@@ -4,7 +4,6 @@ function validarSessao() {
 
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
-
     var b_usuario = document.getElementById("b_usuario");
 
     if (email != null && nome != null) {
@@ -15,6 +14,7 @@ function validarSessao() {
     }
     trazerInfoCarta2();
     qtdVermelho();
+    qtdVerde()
 }
 
 function limparSessao() {
@@ -80,7 +80,31 @@ function qtdVermelho() {
     });
 }
 function qtdVerde() {
-    qtdVerdeDiv.innerHTML = 1;
+    fetch("/usuarios/qtdVerde", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            resposta.json().then(data1=>{
+                console.log(data1)
+                console.log(data1[data1.length-1].qtd)
+                qtdVerdeDiv.innerHTML = data1[data1.length-1].qtd;
+            })
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+    
 }
 function qtdBranco() {
     qtdBrancoDiv.innerHTML = 1;

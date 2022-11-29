@@ -198,9 +198,27 @@ function atualizarFkUsuario(req, res) {
     
 
 }
-// Trazer a quantidade de cor de cada cor
+// Trazer a quantidade de cor de cada cor 
 function qtdVermelho(req, res) {
     usuarioModel.qtdVermelho()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
+function qtdVerde(req, res) {
+    usuarioModel.qtdVerde()
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -228,4 +246,5 @@ module.exports = {
     trazerInfoCarta2,
     atualizarFkUsuario,
     qtdVermelho,
+    qtdVerde,
 }
