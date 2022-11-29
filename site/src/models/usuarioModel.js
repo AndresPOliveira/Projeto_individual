@@ -44,7 +44,14 @@ function salvarCarta(nome, email, senha) {
     return database.executar(instrucao);
 }
 // Trazendo as informações das cartas 
-function trazerInfoCarta(nome, email, senha) {
+function trazerInfoCarta() {
+    var instrucao = `
+        SELECT*FROM cartaFavorita;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function trazerInfoCarta2() {
     var instrucao = `
         SELECT*FROM cartaFavorita;
     `;
@@ -64,5 +71,6 @@ module.exports = {
     atualizarFk,
     salvarCarta,
     trazerInfoCarta,
+    trazerInfoCarta2,
     atualizarFkUsuario,
 };

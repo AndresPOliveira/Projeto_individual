@@ -215,6 +215,9 @@ body{
     width:70px;
     cursor: pointer;
 }
+.cartaRegistrada{
+    display: none;
+}
 /*Editando o footer*/
 .footer {
     background-color: black;

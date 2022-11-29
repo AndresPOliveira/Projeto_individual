@@ -13,6 +13,7 @@ function validarSessao() {
 
         // finalizarAguardar();
     }
+    trazerInfoCarta2()
 }
 
 function limparSessao() {

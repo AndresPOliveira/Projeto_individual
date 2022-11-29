@@ -32,6 +32,9 @@ router.post("/salvarCarta", function (req, res) {
 router.post("/trazerInfoCarta", function (req, res) {
     usuarioController.trazerInfoCarta(req, res);
 })
+router.post("/trazerInfoCarta2", function (req, res) {
+    usuarioController.trazerInfoCarta2(req, res);
+})
 // Atualizando FKUsuario na tabela cartaFavorita atualizarFkUsuario
 router.post("/atualizarFkUsuario", function (req, res) {
     usuarioController.atualizarFkUsuario(req, res);

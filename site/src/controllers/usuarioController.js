@@ -157,6 +157,24 @@ function trazerInfoCarta(req, res) {
             );
     
 }
+function trazerInfoCarta2(req, res) {
+    usuarioModel.trazerInfoCarta2()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
 // Atualizar a fkUsuario na tabela Carta 
 function atualizarFkUsuario(req, res) {
     var idCarta = req.body.idCartaServer;
@@ -188,5 +206,6 @@ module.exports = {
     atualizarFk,
     salvarCarta,
     trazerInfoCarta,
+    trazerInfoCarta2,
     atualizarFkUsuario,
 }
