@@ -13,7 +13,8 @@ function validarSessao() {
 
         // finalizarAguardar();
     }
-    trazerInfoCarta2()
+    trazerInfoCarta2();
+    qtdVermelho();
 }
 
 function limparSessao() {
@@ -51,3 +52,42 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
+// Funções para mostrar a quantidade de cada cor
+function qtdVermelho() {
+    fetch("/usuarios/qtdVermelho", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            resposta.json().then(data1=>{
+                console.log(data1)
+                console.log(data1[data1.length-1].qtd)
+                qtdVermelhoDiv.innerHTML = data1[data1.length-1].qtd;
+            })
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+}
+function qtdVerde() {
+    qtdVerdeDiv.innerHTML = 1;
+}
+function qtdBranco() {
+    qtdBrancoDiv.innerHTML = 1;
+}
+function qtdAzul() {
+    qtdAzulDiv.innerHTML = 1;
+}
+function qtdPreto() {
+    qtdPretoDiv.innerHTML = 1;
+}

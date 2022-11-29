@@ -39,4 +39,8 @@ router.post("/trazerInfoCarta2", function (req, res) {
 router.post("/atualizarFkUsuario", function (req, res) {
     usuarioController.atualizarFkUsuario(req, res);
 })
+// Buscando a quantidade de pessoas em cada cor 
+router.post("/qtdVermelho", function (req, res) {
+    usuarioController.qtdVermelho(req, res);
+})
 module.exports = router;

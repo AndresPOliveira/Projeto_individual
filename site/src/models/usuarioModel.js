@@ -64,6 +64,14 @@ function atualizarFkUsuario(idCarta,idUsuario) {
     UPDATE cartaFavorita SET fkUsuario = ${idUsuario} WHERE idCartaFavorita = ${idCarta}`;
     return database.executar(instrucao);
 }
+// Trazer a quantidade de pessoas de cada cor
+function qtdVermelho() {
+    var instrucao = `
+    select count(*)'qtd' from usuario where fkcor = 1;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 module.exports = {
     entrar,
     cadastrar,
@@ -73,4 +81,5 @@ module.exports = {
     trazerInfoCarta,
     trazerInfoCarta2,
     atualizarFkUsuario,
+    qtdVermelho,
 };
