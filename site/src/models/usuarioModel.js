@@ -100,6 +100,14 @@ function qtdPreto() {
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+//Cor com a maior quantidade de pessoas 
+function maiorQtd() {
+    var instrucao = `
+    select count(*)'qtd', fkcor from usuario group by fkcor ;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 module.exports = {
     entrar,
     cadastrar,
@@ -114,4 +122,5 @@ module.exports = {
     qtdBranco,
     qtdAzul,
     qtdPreto,
+    maiorQtd
 };

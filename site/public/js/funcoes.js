@@ -18,6 +18,7 @@ function validarSessao() {
     qtdBranco();
     qtdAzul();
     qtdPreto();
+    maiorQtd()
 }
 
 function limparSessao() {
@@ -179,6 +180,55 @@ function qtdPreto() {
                 console.log(data1)
                 console.log(data1[data1.length-1].qtd)
                 qtdPretoDiv.innerHTML = data1[data1.length-1].qtd;
+            })
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+}
+// Cor com a maior quantidade de pessoas 
+function maiorQtd() {
+    fetch("/usuarios/maiorQtd", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            resposta.json().then(data1=>{
+                console.log(data1)
+                console.log(data1[data1.length-1].qtd)
+                var maior = 0;
+                var nomeMaior = 0;
+                for (let index = 0; index < data1.length; index++) {
+                    if (data1[index].qtd > maior) {
+                        maior = data1[index].qtd
+                        nomeMaior = data1[index].fkcor;
+                        console.log(maior)
+                        console.log(data1[index].fkcor)
+                        if (nomeMaior == 1) {
+                            nomeMaiorQtd.innerHTML = "vermelho"
+                        } else if(nomeMaior == 2){
+                            nomeMaiorQtd.innerHTML = "verde"
+                        } else if(nomeMaior == 3){
+                            nomeMaiorQtd.innerHTML = "branco"
+                        } else if(nomeMaior == 4){
+                            nomeMaiorQtd.innerHTML = "azul"
+                        } else if(nomeMaior == 5){
+                            nomeMaiorQtd.innerHTML = "preto"
+                        }
+
+                    }
+                    
+                }
             })
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");

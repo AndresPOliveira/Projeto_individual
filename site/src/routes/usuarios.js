@@ -55,4 +55,8 @@ router.post("/qtdAzul", function (req, res) {
 router.post("/qtdPreto", function (req, res) {
     usuarioController.qtdPreto(req, res);
 })
+// Cor com a maior quantidade de pessoas 
+router.post("/maiorQtd", function (req, res) {
+    usuarioController.maiorQtd(req, res);
+})
 module.exports = router;
